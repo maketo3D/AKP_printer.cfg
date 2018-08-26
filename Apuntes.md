@@ -1,3 +1,4 @@
 # APUNTES SOBRE KLIPPER
 
 QUERY_PROBE - Muestra el estado de Z probe
+QUERY_ENDSTOPS - M119
