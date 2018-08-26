@@ -35,11 +35,21 @@ BED_MESH_CLEAR
 
 ## CALIBRACIÓN
 
-DELTA_CALIBRATE - 
+  # DELTA_CALIBRATE
 
-Recv: // stepper_a: position_endstop: 301.367232 angle: 90.053255
-Recv: // stepper_b: position_endstop: 301.092982 angle: 210.061794
-Recv: // stepper_c: position_endstop: 300.737168 angle: 330.000000
-Recv: // delta_radius: 135.200867
-Recv: // To use these parameters, update the printer config file with
-Recv: // the above and then issue a RESTART command
+Tras la calibracion tendremos esta salida por terminal, tenemos que editar el printer.cfg con dichos valores y ejecutar RESTART.
+
+Recv: // stepper_a: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+Recv: // stepper_b: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+Recv: // stepper_c: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+Recv: // delta_radius: xxx.xxxxxx
+
+  # PID_CALIBRATE HEATER=extruder/heater_bed TARGET=Temperatura 
+  
+Tras terminar el ajuste PID, hay que introducir los valores nuevos en el printer.cfg y ejecutar RESTART.
+
+Recv: // PID parameters: pid_Kp=xx.xxx pid_Ki=x.xxx pid_Kd=xxx.xxx
+
+
+Si añadimos [WRITE_FILE=1] se envia un log a /tmp/heattest.txt
+
