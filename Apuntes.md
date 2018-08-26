@@ -32,3 +32,14 @@ BED_MESH_OUTPUT
 BED_MESH_OUTPUT
 
 BED_MESH_CLEAR
+
+## CALIBRACIÓN
+
+DELTA_CALIBRATE - 
+
+Recv: // stepper_a: position_endstop: 301.367232 angle: 90.053255
+Recv: // stepper_b: position_endstop: 301.092982 angle: 210.061794
+Recv: // stepper_c: position_endstop: 300.737168 angle: 330.000000
+Recv: // delta_radius: 135.200867
+Recv: // To use these parameters, update the printer config file with
+Recv: // the above and then issue a RESTART command
