@@ -13,11 +13,11 @@ https://github.com/correos/AKP_printer.cfg/blob/master/printer.cfg
 
 
 Para no tmc:
--Borrar las 3 secciones:
-[tmc2130 stepper_a] / b y c
+- Borrar las 3 secciones:
+ [tmc2130 stepper_a] / b y c
 - Invertir direcciones motores a b y c:
 step_pin: arXX —-> step_pin: !arXX
--Ajustar aceleraciones al gusto
+- Ajustar aceleraciones al gusto
 
 Revisar para cualquier consulta de modificaciones.
 https://github.com/KevinOConnor/klipper/tree/master/config
