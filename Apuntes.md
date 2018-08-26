@@ -1,4 +1,4 @@
-# APUNTES SOBRE KLIPPER
+## APUNTES SOBRE KLIPPER
 
 HELP - Socorro, te saca todos los comandos.
 
