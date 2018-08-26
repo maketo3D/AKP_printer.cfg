@@ -14,10 +14,6 @@ QUERY_PROBE - Muestra el estado de Z probe
 
 QUERY_ENDSTOPS - M119
 
-DELTA_CALIBRATE - 
-
-PID_CALIBRATE HEATER=extruder/heater_bed TARGET=<temperature> [WRITE_FILE=1] - log a /tmp/heattest.txt
-
 DUMP_TMC STEPPER=stepper_a/b/c - Estado del driver tmc
 
 ^ pin con pullup
