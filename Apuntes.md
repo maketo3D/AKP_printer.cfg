@@ -35,7 +35,7 @@ BED_MESH_CLEAR
 
 ## CALIBRACIÓN
 
-  # DELTA_CALIBRATE
+   DELTA_CALIBRATE
 
 Tras la calibracion tendremos esta salida por terminal, tenemos que editar el printer.cfg con dichos valores y ejecutar RESTART.
 
@@ -44,7 +44,7 @@ Recv: // stepper_b: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
 Recv: // stepper_c: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
 Recv: // delta_radius: xxx.xxxxxx
 
-  # PID_CALIBRATE HEATER=extruder/heater_bed TARGET=Temperatura 
+   PID_CALIBRATE HEATER=extruder/heater_bed TARGET=Temperatura 
   
 Tras terminar el ajuste PID, hay que introducir los valores nuevos en el printer.cfg y ejecutar RESTART.
 
