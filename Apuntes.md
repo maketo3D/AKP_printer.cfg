@@ -1,5 +1,34 @@
 ## APUNTES SOBRE KLIPPER
 
+# Como bufar la máquina:
+
+> Instalacion de klipper
+https://github.com/KevinOConnor/klipper/blob/master/docs/Installation.md
+
+> Plugin klipper para octoprint
+https://github.com/mmone/OctoprintKlipperPlugin
+
+> Configuracion base para AKPlus + tmc2130
+https://github.com/correos/AKP_printer.cfg/blob/master/printer.cfg
+
+
+Para no tmc:
+- Borrar las 3 secciones:
+ [tmc2130 stepper_a] / b y c
+- Invertir direcciones motores a b y c:
+step_pin: arXX —-> step_pin: !arXX
+- Ajustar aceleraciones al gusto
+
+Revisar para cualquier consulta de modificaciones.
+https://github.com/KevinOConnor/klipper/tree/master/config
+
+>Una vez introducida la config con el plugin de octoprint pasar a realizar los checks:
+https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
+
+> Ver como vuela la kossel
+
+# Algunos comandos
+
 HELP - Socorro, te saca todos los comandos.
 
 STATUS - Check de la maquina
