@@ -27,6 +27,7 @@ https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
 
 > Ver como vuela la kossel
 
+
 # Algunos comandos
 
 HELP - Socorro, te saca todos los comandos.
@@ -65,6 +66,15 @@ Añadimos en octoprint setting/gcode scripts/After print job completes:
 
 SET_BEEPER DURATION=1
 
+AQUI ME FALTA UNA CAPTURA
+
+### Comandos de octoprint desde el LCD
+
+Copiamos el menu.cfg del repositorio en /home/pi/klipper/klippy/extras/display/menu.cfg
+
+Instalamos en octoprint el plugin "Action Commands" y creamos los siguientes comandos en el:
+
+AQUI ME FALTA UNA CAPTURA
 
 
 ## CALIBRACIÓN
