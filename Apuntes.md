@@ -46,9 +46,6 @@ QUERY_ENDSTOPS - M119
 
 DUMP_TMC STEPPER=stepper_a/b/c - Estado del driver tmc
 
-^ pin con pullup
-! inversor de logica 
-
 *por configurar:
 
 BED_MESH_CALIBRATE
@@ -59,6 +56,14 @@ BED_MESH_OUTPUT
 
 BED_MESH_CLEAR
 
+
+### PINES
+
+^ pin con pullup
+
+! inversor de logica 
+
+Format is: [^] [!] [chip_name:]
 
 ### BEEPER
 
