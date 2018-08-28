@@ -65,13 +65,6 @@ BED_MESH_CLEAR
 
 Format is: [^] [!] [chip_name:]
 
-### BEEPER
-
-Añadimos en octoprint setting/gcode scripts/After print job completes:
-
-SET_BEEPER DURATION=1
-
-AQUI ME FALTA UNA CAPTURA
 
 ### Comandos de octoprint desde el LCD
 
