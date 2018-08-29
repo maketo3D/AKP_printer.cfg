@@ -46,9 +46,6 @@ QUERY_ENDSTOPS - M119
 
 DUMP_TMC STEPPER=stepper_a/b/c - Estado del driver tmc
 
-^ pin con pullup
-! inversor de logica 
-
 *por configurar:
 
 BED_MESH_CALIBRATE
@@ -60,13 +57,14 @@ BED_MESH_OUTPUT
 BED_MESH_CLEAR
 
 
-### BEEPER
+### PINES
 
-Añadimos en octoprint setting/gcode scripts/After print job completes:
+^ pin con pullup
 
-SET_BEEPER DURATION=1
+! inversor de logica 
 
-AQUI ME FALTA UNA CAPTURA
+Format is: [^] [!] [chip_name:]
+
 
 ### Comandos de octoprint desde el LCD
 
