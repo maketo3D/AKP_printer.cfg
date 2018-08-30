@@ -12,12 +12,8 @@ https://github.com/mmone/OctoprintKlipperPlugin
 https://github.com/correos/AKP_printer.cfg/blob/master/printer.cfg
 
 
-Para no tmc:
-- Borrar las 3 secciones:
- [tmc2130 stepper_a] / b y c
-- Invertir direcciones motores a b y c:
-step_pin: arXX —-> step_pin: !arXX
-- Ajustar aceleraciones al gusto
+Para drivers stock A4988:
+https://github.com/correos/AKP_printer.cfg/blob/master/printer%20-%20stock.cfg
 
 Revisar para cualquier consulta de modificaciones.
 https://github.com/KevinOConnor/klipper/tree/master/config
