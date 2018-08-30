@@ -82,6 +82,8 @@ pin: ^ar18  // normal
 
 pin: ^!ar18  // invertido
 
+z_offset: xx.xx // ajustamos tambien nuestro offset del sensor
+
 
 
 ###   DELTA_CALIBRATE
