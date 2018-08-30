@@ -89,8 +89,11 @@ pin: ^!ar18  // invertido
 Tras la calibracion tendremos esta salida por terminal, tenemos que editar el printer.cfg con dichos valores y ejecutar RESTART.
 
 Recv: // stepper_a: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+
 Recv: // stepper_b: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+
 Recv: // stepper_c: position_endstop: xxx.xxxxxx angle: xxx.xxxxxx
+
 Recv: // delta_radius: xxx.xxxxxx
 
 ###  PID_CALIBRATE HEATER=extruder/heater_bed TARGET=Temperatura 
