@@ -84,7 +84,7 @@ Lanzar QUERY_PROBE, si aparece TRIGGERED sin estar pulsado invertir el pin:
 [probe]
 pin: ^ar18  // normal
 
-pin: !^ar18  // invertido
+pin: ^!ar18  // invertido
 
 
 
