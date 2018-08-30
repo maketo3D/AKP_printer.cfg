@@ -77,6 +77,17 @@ AQUI ME FALTA UNA CAPTURA
 
 ## CALIBRACIÓN
 
+###   Comprobar Z probe
+
+Lanzar QUERY_PROBE, si aparece TRIGGERED sin estar pulsado invertir el pin:
+
+[probe]
+pin: ^ar18  // normal
+
+pin: !^ar18  // invertido
+
+
+
 ###   DELTA_CALIBRATE
 
 Tras la calibracion tendremos esta salida por terminal, tenemos que editar el printer.cfg con dichos valores y ejecutar RESTART.
