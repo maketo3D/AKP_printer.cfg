@@ -1,6 +1,6 @@
 ## Klipper <3
 
-- Apuntes - Recopilacion de informacion interesante sobre klipper.
-- Menu.cfg - Menu con modificaciones.
-- Printer.cfg - Configuracion para impresora usando tmc2130.
-- Pirinter-stock.cfg - Configuracion para impresora con drivers originales.
+- Apuntes - Recopilación de información interesante sobre klipper.
+- Menu.cfg - Menú LCD con modificaciones.
+- Printer.cfg - Configuración para impresora usando drivers tmc2130 por SPI.
+- Pirinter-stock.cfg - Configuración para impresora con drivers originales.
