@@ -24,6 +24,7 @@ https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
 > Ver como vuela la kossel
 
 
+
 # Algunos comandos
 
 HELP - Socorro, te saca todos los comandos.
@@ -53,6 +54,7 @@ BED_MESH_OUTPUT
 BED_MESH_CLEAR
 
 
+
 ### PINES
 
 ^ pin con pullup
@@ -62,6 +64,7 @@ BED_MESH_CLEAR
 Format is: [^] [!] [chip_name:]
 
 
+
 ### Comandos de octoprint desde el LCD
 
 Copiamos el menu.cfg del repositorio en /home/pi/klipper/klippy/extras/display/menu.cfg
@@ -69,6 +72,10 @@ Copiamos el menu.cfg del repositorio en /home/pi/klipper/klippy/extras/display/m
 Instalamos en octoprint el plugin "Action Commands" y creamos los siguientes comandos en el:
 
 ![actioncommands](https://github.com/correos/AKP_printer.cfg/blob/master/img/octoprint%20commands.PNG)
+
+![actioncommandslcd](https://github.com/correos/AKP_printer.cfg/blob/master/img/comandoslcd.jpg)
+
+
 
 ## CALIBRACIÓN
 
@@ -83,7 +90,6 @@ pin: ^ar18  // normal
 pin: ^!ar18  // invertido
 
 z_offset: xx.xx // ajustamos tambien nuestro offset del sensor
-
 
 
 ###   DELTA_CALIBRATE
