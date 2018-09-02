@@ -25,6 +25,7 @@ https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
 
 
 
+
 # Algunos comandos
 
 HELP - Socorro, te saca todos los comandos.
@@ -55,6 +56,7 @@ BED_MESH_CLEAR
 
 
 
+
 ### PINES
 
 ^ pin con pullup
@@ -62,6 +64,7 @@ BED_MESH_CLEAR
 ! inversor de logica 
 
 Format is: [^] [!] [chip_name:]
+
 
 
 
@@ -74,6 +77,20 @@ Instalamos en octoprint el plugin "Action Commands" y creamos los siguientes com
 ![actioncommands](https://github.com/correos/AKP_printer.cfg/blob/master/img/octoprint%20commands.PNG)
 
 ![actioncommandslcd](https://github.com/correos/AKP_printer.cfg/blob/master/img/comandoslcd.jpg)
+
+
+
+
+### Pitido al finalizar la impresión
+
+Añadimos en octoprint, gcode script/after print job completes:
+
+>SET_PIN PIN=beeper VALUE=1
+>G4 P1000 ; wait 1 s
+>SET_PIN PIN=beeper VALUE=0
+
+![beeper](https://github.com/maketo3D/AKP_printer.cfg/blob/master/img/beeperscript.PNG)
+
 
 
 
