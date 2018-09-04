@@ -75,6 +75,7 @@ Copiamos el menu.cfg del repositorio en /home/pi/klipper/klippy/extras/display/m
 Instalamos en octoprint el plugin "Action Commands" y creamos los siguientes comandos en el:
 
 ![actioncommands](https://github.com/correos/AKP_printer.cfg/blob/master/img/octoprint%20commands.PNG)
+Reiniciamos el servicio Klipper o directamente la raspberry.
 
 ![actioncommandslcd](https://github.com/correos/AKP_printer.cfg/blob/master/img/comandoslcd.jpg)
 
