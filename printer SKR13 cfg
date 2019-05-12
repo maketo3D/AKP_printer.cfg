@@ -6,34 +6,31 @@ step_pin: P2.2
 dir_pin: P2.6
 enable_pin: !P2.1
 step_distance: .0125
-#step_distance: .00078125
 endstop_pin: P1.28
 homing_speed: 60
-#angle = 209.913395
-#arm_length = 269.729488
-#position_endstop = 298.679553
+angle = 210
+arm_length = 269
+position_endstop = 300
 
 [stepper_b]
 step_pin: P0.19
 dir_pin: P0.20
 enable_pin: !P2.8
 step_distance: .0125
-#step_distance: .00078125
 endstop_pin: P1.26
-#angle = 329.100389
-#arm_length = 271.812674
-#position_endstop = 297.661694
+angle = 330
+arm_length = 269
+position_endstop = 300
 
 [stepper_c]
 step_pin: P0.22
 dir_pin: P2.11
 enable_pin: !P0.21
 step_distance: .0125
-#step_distance: .00078125
 endstop_pin: P1.24
-#angle = 90.000000
-#arm_length = 273.127739
-#position_endstop = 296.634008
+angle = 90
+arm_length = 269
+position_endstop = 300
 
 
 [tmc2208 stepper_a]
@@ -112,16 +109,14 @@ kinematics: delta
 max_velocity: 900
 max_accel: 3000
 max_z_velocity: 900
-#delta_radius: 134
-#delta_radius: 135.760190
+delta_radius: 134
 minimum_z_position: -10
 square_corner_velocity: 5
 
 [probe]
 pin: ^!P1.25
-#x_offset: 0.0
-#y_offset: 0.0
 z_offset: 0.0
+#CHANGE Z_OFFSET WITH YOUR VALUE!
 speed: 5.0
 #activate_gcode:
 #deactivate_gcode:
@@ -132,8 +127,6 @@ speed: 50
 horizontal_move_z: 5
 samples: 3
 samples_result: average
-#   One can choose median or average between probes samples
-#   The default is average.
 sample_retract_dist: 2.0
 
 [endstop_phase]
@@ -142,55 +135,15 @@ sample_retract_dist: 2.0
 path: ~/.octoprint/uploads/
 
 [display]
-lcd_type: st7920
-cs_pin: P1.19
-sclk_pin: P1.20
-sid_pin: P1.18
+lcd_type: hd44780
+rs_pin: P1.19
+e_pin: P1.18
+d4_pin: P1.20
+d5_pin: P1.21
+d6_pin: P1.22
+d7_pin: P1.23
 encoder_pins: ^P3.26, ^P3.25
 click_pin: ^!P0.28
 
-#[output_pin BEEPER_pin]
-#pin: P1.30
-
 [static_digital_output silence_beeper]
 pins: !P1.30
-
-[output_pin servo]
-pin: P2.0
-
-#*# <---------------------- SAVE_CONFIG ---------------------->
-#*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
-#*#
-#*# [printer]
-#*# delta_radius = 136.139646
-#*#
-#*# [stepper_a]
-#*# angle = 210.099781
-#*# arm_length = 269.729488
-#*# position_endstop = 299.172346
-#*#
-#*# [stepper_b]
-#*# angle = 329.162903
-#*# arm_length = 271.812674
-#*# position_endstop = 298.296422
-#*#
-#*# [stepper_c]
-#*# angle = 90.000000
-#*# arm_length = 273.127739
-#*# position_endstop = 297.242479
-#*#
-#*# [delta_calibrate]
-#*# height0 = -0.1
-#*# height0_pos = 23940.000,23873.000,23787.000
-#*# height1 = -0.1
-#*# height1_pos = 26956.000,26893.000,21417.000
-#*# height2 = -0.1
-#*# height2_pos = 23170.333,28702.333,23023.333
-#*# height3 = -0.1
-#*# height3_pos = 21691.000,26357.000,26294.000
-#*# height4 = -0.1
-#*# height4_pos = 23180.333,23097.333,27195.333
-#*# height5 = -0.1
-#*# height5_pos = 26074.000,21820.000,25887.000
-#*# height6 = -0.1
-#*# height6_pos = 28097.333,23139.333,23024.333
