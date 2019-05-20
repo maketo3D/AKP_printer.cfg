@@ -1,5 +1,6 @@
 #//Version en desarrollo//
 # Anycubic Kossel Plus + SKR v1.3 + TMC2208 UART (x4)
+# Wiring diagram: https://github.com/maketo3D/AKP_printer.cfg/blob/master/skr_v_1_3_pin_akp.PNG
 
 [stepper_a]
 step_pin: P2.2
