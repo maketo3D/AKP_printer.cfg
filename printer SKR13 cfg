@@ -119,6 +119,9 @@ pin: ^!P1.25
 z_offset: 0.0
 #CHANGE Z_OFFSET WITH YOUR VALUE!
 speed: 5.0
+samples: 3
+samples_result: average
+sample_retract_dist: 2.0
 #activate_gcode:
 #deactivate_gcode:
 
@@ -126,9 +129,6 @@ speed: 5.0
 radius: 90
 speed: 50
 horizontal_move_z: 5
-samples: 3
-samples_result: average
-sample_retract_dist: 2.0
 
 [endstop_phase]
 
