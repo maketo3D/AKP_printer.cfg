@@ -1,0 +1,256 @@
+# Anycubic Kossel Plus + SKR v1.3 + A4988 (x4)
+# Wiring diagram: https://github.com/maketo3D/AKP_printer.cfg/blob/master/skr_v_1_3_pin_akp.PNG
+
+[stepper_a]
+step_pin: P2.2
+dir_pin: !P2.6
+enable_pin: !P2.1
+step_distance: .0125
+#step_distance: .00078125
+endstop_pin: P1.28
+homing_speed: 60
+#angle = 209.913395
+#arm_length = 269.729488
+#position_endstop = 298.679553
+
+[stepper_b]
+step_pin: P0.19
+dir_pin: !P0.20
+enable_pin: !P2.8
+step_distance: .0125
+#step_distance: .00078125
+endstop_pin: P1.26
+#angle = 329.100389
+#arm_length = 271.812674
+#position_endstop = 297.661694
+
+[stepper_c]
+step_pin: P0.22
+dir_pin: !P2.11
+enable_pin: !P0.21
+step_distance: .0125
+#step_distance: .00078125
+endstop_pin: P1.24
+#angle = 90.000000
+#arm_length = 273.127739
+#position_endstop = 296.634008
+
+
+#[tmc2208 stepper_a]
+#uart_pin: P1.17
+#microsteps: 16
+#interpolate: True
+#run_current: 0.890
+#hold_current: 0.500
+#stealthchop_threshold: 124
+
+#[tmc2208 stepper_b]
+#uart_pin: P1.15
+#microsteps: 16
+#interpolate: True
+#run_current: 0.890
+#hold_current: 0.500
+#stealthchop_threshold: 124
+
+#[tmc2208 stepper_c]
+#uart_pin: P1.10
+#microsteps: 16
+#interpolate: True
+#run_current: 0.890
+#hold_current: 0.500
+#stealthchop_threshold: 124
+
+[extruder]
+step_pin: P2.13
+dir_pin: P0.11
+enable_pin: !P2.12
+#directo a 16
+#step_distance: 0.01041667
+#directo dualgear
+step_distance: 0.0070861678
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: P2.5
+sensor_type: EPCOS 100K B57560G104F
+sensor_pin: P0.24
+#control: pid
+#pid_Kp: 30.233
+#pid_Ki: 1.901
+#pid_Kd: 120.177
+min_temp: 0
+max_temp: 260
+max_extrude_only_distance:600
+instantaneous_corner_velocity: 2.000
+#   The maximum instantaneous velocity change (in mm/s) of the
+#   extruder during the junction of two moves. The default is 1mm/s.
+#max_extrude_only_velocity:
+#max_extrude_only_accel:
+
+#[tmc2208 extruder]
+#uart_pin: P1.8
+#microsteps: 16
+#interpolate: true
+#run_current: 0.950
+#hold_current: 0.500
+#stealthchop_threshold: 0
+
+[heater_bed]
+heater_pin: P2.7
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: P0.23
+control: pid
+pid_Kp: 71.084
+pid_Ki: 0.803
+pid_Kd: 1572.728
+min_temp: 0
+max_temp: 120
+
+[fan]
+pin: P2.4
+
+[heater_fan extruder_cooler_fan]
+pin: P2.3
+heater_temp: 50.0
+fan_speed: 1.0
+
+[mcu]
+serial: /dev/serial/by-path/platform-3f980000.usb-usb-0:1.3:1.0
+
+[printer]
+kinematics: delta
+max_velocity: 600
+max_accel: 5000
+max_accel_to_decel: 3000
+#max_z_accel: 5000
+max_z_velocity: 600
+#delta_radius: 134
+#delta_radius: 135.760190
+minimum_z_position: -10
+square_corner_velocity: 5
+
+[probe]
+pin: ^!P1.25
+#x_offset: 0.0
+#y_offset: 0.0
+z_offset: 0.0
+speed: 5.0
+samples: 3
+samples_result: average
+#   One can choose median or average between probes samples
+#   The default is average.
+sample_retract_dist: 2.0
+#activate_gcode:
+#deactivate_gcode:
+
+[delta_calibrate]
+radius: 90
+speed: 50
+horizontal_move_z: 5
+
+[endstop_phase]
+
+[virtual_sdcard]
+path: ~/.octoprint/uploads/
+
+[display]
+lcd_type: st7920
+cs_pin: P1.19
+sclk_pin: P1.20
+sid_pin: P1.18
+encoder_pins: ^P3.26, ^P3.25
+click_pin: ^!P0.28
+
+#[output_pin BEEPER_pin]
+#pin: P1.30
+
+[static_digital_output silence_beeper]
+pins: !P1.30
+
+[output_pin servo]
+pin: P2.0
+
+[output_pin servo2]
+pin: P0.1
+
+[hall_filament_width_sensor]
+adc1: P0.2
+adc2: P0.3
+Cal_dia1: 1.5
+Cal_dia2: 2.0
+#Cal_dia3: 2.00
+Raw_dia1:10098
+Raw_dia2:10622
+#Raw_dia3:4067
+default_nominal_filament_diameter: 1.75
+max_difference: 0.15
+measurement_delay: 700
+measurement_interval: 20
+pause_on_runout: True
+event_delay: 3.0
+pause_delay: 0.5
+#runout_detect: True
+
+[menu __filament_width_current]
+type: item
+name: "Dia:{0:4.2f} mm"
+parameter:  hall_filament_width_sensor.Diameter
+
+[menu __filament_raw_width_current]
+type: item
+name: "RAW:{0:4.0f}"
+parameter:  hall_filament_width_sensor.Raw
+
+[menu __filament]
+type: list
+name: Filament
+items:
+ __temp __hotend0_current, __temp __hotend0_target
+ .__unload
+ .__load
+ .__feed
+ __filament_width_current
+ __filament_raw_width_current
+
+
+#*# <---------------------- SAVE_CONFIG ---------------------->
+#*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
+#*#
+#*# [printer]
+#*# delta_radius = 136.536577
+#*#
+#*# [stepper_a]
+#*# angle = 210.310008
+#*# arm_length = 269.729488
+#*# position_endstop = 299.845820
+#*#
+#*# [stepper_b]
+#*# angle = 329.505165
+#*# arm_length = 271.812674
+#*# position_endstop = 299.236728
+#*#
+#*# [stepper_c]
+#*# angle = 90.000000
+#*# arm_length = 273.127739
+#*# position_endstop = 298.539938
+#*#
+#*# [extruder]
+#*# control = pid
+#*# pid_kp = 29.590
+#*# pid_ki = 1.461
+#*# pid_kd = 149.798
+#*#
+#*# [delta_calibrate]
+#*# height0 = 0.0
+#*# height0_pos = 23992.000,23939.000,23880.000
+#*# height1 = 0.0
+#*# height1_pos = 27632.000,27549.000,21342.000
+#*# height2 = 0.0
+#*# height2_pos = 23249.000,29702.000,23133.000
+#*# height3 = 0.0
+#*# height3_pos = 21563.000,26920.000,26870.000
+#*# height4 = 0.0
+#*# height4_pos = 23195.333,23141.333,27879.333
+#*# height5 = 0.0
+#*# height5_pos = 26518.000,21711.000,26374.000
+#*# height6 = 0.0
+#*# height6_pos = 28915.000,23189.000,23110.000
