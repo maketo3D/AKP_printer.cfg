@@ -40,7 +40,7 @@ microsteps: 16
 interpolate: True
 run_current: 0.850
 hold_current: 0.500
-stealthchop_threshold: 124
+stealthchop_threshold: 255
 
 [tmc2208 stepper_b]
 uart_pin: P1.15
@@ -48,7 +48,7 @@ microsteps: 16
 interpolate: True
 run_current: 0.850
 hold_current: 0.500
-stealthchop_threshold: 124
+stealthchop_threshold: 255
 
 [tmc2208 stepper_c]
 uart_pin: P1.10
@@ -56,7 +56,7 @@ microsteps: 16
 interpolate: True
 run_current: 0.850
 hold_current: 0.500
-stealthchop_threshold: 124
+stealthchop_threshold: 255
 
 [extruder]
 step_pin: P2.13
